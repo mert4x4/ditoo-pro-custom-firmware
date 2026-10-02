@@ -1,0 +1,391 @@
+{
+  "config": {
+    "flow_title": "{name}",
+    "step": {
+      "user": {
+        "description": "Choose a Ditoo Pro (DitooPro-Light) seen by Home Assistant's Bluetooth.",
+        "data": {
+          "address": "Device"
+        }
+      },
+      "bluetooth_confirm": {
+        "description": "Set up {name}?"
+      }
+    },
+    "abort": {
+      "already_configured": "This Ditoo Pro is already set up.",
+      "no_devices_found": "No DitooPro-Light found. Turn off Bluetooth on phones that are connected to it and try again."
+    }
+  },
+  "entity": {
+    "select": {
+      "channel": {
+        "name": "Channel",
+        "state": {
+          "clock": "Clock",
+          "light": "Light",
+          "cloud": "Cloud",
+          "music": "Music",
+          "custom_1": "Custom 1",
+          "custom_2": "Custom 2",
+          "custom_3": "Custom 3",
+          "lyric": "Lyric display"
+        }
+      }
+    },
+    "number": {
+      "brightness": {
+        "name": "Brightness"
+      },
+      "volume": {
+        "name": "Volume"
+      }
+    },
+    "switch": {
+      "remote_mode": {
+        "name": "Drawing mode"
+      },
+      "connection": {
+        "name": "Connection"
+      },
+      "key_listening": {
+        "name": "Key listening"
+      }
+    },
+    "text": {
+      "message": {
+        "name": "Message"
+      }
+    },
+    "button": {
+      "sync_time": {
+        "name": "Sync time"
+      },
+      "keyboard_light_toggle": {
+        "name": "Keyboard light toggle"
+      },
+      "keyboard_light_next": {
+        "name": "Keyboard light next effect"
+      },
+      "keyboard_light_previous": {
+        "name": "Keyboard light previous effect"
+      }
+    },
+    "sensor": {
+      "firmware": {
+        "name": "Firmware"
+      },
+      "battery": {
+        "name": "Battery"
+      }
+    },
+    "event": {
+      "key_m": {
+        "name": "M key",
+        "state_attributes": {
+          "event_type": {
+            "state": {
+              "down": "Down",
+              "up": "Up",
+              "long": "Long press",
+              "repeat": "Repeat",
+              "long-up": "Long press released"
+            }
+          }
+        }
+      },
+      "key_plus": {
+        "name": "Plus key",
+        "state_attributes": {
+          "event_type": {
+            "state": {
+              "down": "Down",
+              "up": "Up",
+              "long": "Long press",
+              "repeat": "Repeat",
+              "long-up": "Long press released"
+            }
+          }
+        }
+      },
+      "key_left": {
+        "name": "Left key",
+        "state_attributes": {
+          "event_type": {
+            "state": {
+              "down": "Down",
+              "up": "Up",
+              "long": "Long press",
+              "repeat": "Repeat",
+              "long-up": "Long press released"
+            }
+          }
+        }
+      },
+      "key_right": {
+        "name": "Right key",
+        "state_attributes": {
+          "event_type": {
+            "state": {
+              "down": "Down",
+              "up": "Up",
+              "long": "Long press",
+              "repeat": "Repeat",
+              "long-up": "Long press released"
+            }
+          }
+        }
+      },
+      "key_arm": {
+        "name": "Arm key",
+        "state_attributes": {
+          "event_type": {
+            "state": {
+              "down": "Down",
+              "up": "Up",
+              "long": "Long press",
+              "repeat": "Repeat",
+              "long-up": "Long press released"
+            }
+          }
+        }
+      },
+      "key_brightness": {
+        "name": "Brightness key",
+        "state_attributes": {
+          "event_type": {
+            "state": {
+              "down": "Down",
+              "up": "Up",
+              "long": "Long press",
+              "repeat": "Repeat",
+              "long-up": "Long press released"
+            }
+          }
+        }
+      },
+      "key_minus": {
+        "name": "Minus key",
+        "state_attributes": {
+          "event_type": {
+            "state": {
+              "down": "Down",
+              "up": "Up",
+              "long": "Long press",
+              "repeat": "Repeat",
+              "long-up": "Long press released"
+            }
+          }
+        }
+      },
+      "key_little": {
+        "name": "Little key",
+        "state_attributes": {
+          "event_type": {
+            "state": {
+              "down": "Down",
+              "up": "Up",
+              "long": "Long press",
+              "repeat": "Repeat",
+              "long-up": "Long press released"
+            }
+          }
+        }
+      }
+    },
+    "binary_sensor": {
+      "charging": {
+        "name": "Charging"
+      },
+      "external_power": {
+        "name": "External power"
+      }
+    }
+  },
+  "services": {
+    "show_text": {
+      "name": "Show text",
+      "description": "Show text on the screen (remote mode). Text wider than the screen scrolls.",
+      "fields": {
+        "device_id": {
+          "name": "Device",
+          "description": "Ditoo Pro to use. Needed only when more than one is set up."
+        },
+        "text": {
+          "name": "Text",
+          "description": "Letters, digits and : . - + / % ° ! ? = _"
+        },
+        "color": {
+          "name": "Color",
+          "description": "Text color."
+        },
+        "background": {
+          "name": "Background",
+          "description": "Background color."
+        },
+        "speed": {
+          "name": "Speed",
+          "description": "Scroll speed in pixels per second."
+        },
+        "duration": {
+          "name": "Duration",
+          "description": "Seconds until the stock screen returns. Empty: stay."
+        },
+        "y": {
+          "name": "Row",
+          "description": "Top row of the 5 px high text."
+        },
+        "start": {
+          "name": "Start",
+          "description": "Where each scroll pass starts: right (text enters from the right edge) or left (first letter at the left edge)."
+        },
+        "mode": {
+          "name": "Mode",
+          "description": "scroll: the whole text scrolls. words: one word at a time; a word that fits is shown centered, a longer word scrolls."
+        },
+        "word_seconds": {
+          "name": "Seconds per word",
+          "description": "In words mode, how long a word that fits the screen stays."
+        }
+      }
+    },
+    "show_image": {
+      "name": "Show image",
+      "description": "Show an image file (PNG, GIF first frame) scaled to 16x16.",
+      "fields": {
+        "device_id": {
+          "name": "Device",
+          "description": "Ditoo Pro to use. Needed only when more than one is set up."
+        },
+        "path": {
+          "name": "Path",
+          "description": "File path inside allowlist_external_dirs."
+        },
+        "duration": {
+          "name": "Duration",
+          "description": "Seconds until the stock screen returns. Empty: stay."
+        }
+      }
+    },
+    "fill": {
+      "name": "Fill",
+      "description": "Fill the screen with one color (remote mode).",
+      "fields": {
+        "device_id": {
+          "name": "Device",
+          "description": "Ditoo Pro to use. Needed only when more than one is set up."
+        },
+        "color": {
+          "name": "Color",
+          "description": "Fill color."
+        }
+      }
+    },
+    "set_weather": {
+      "name": "Set weather",
+      "description": "Current weather for the stock clock face.",
+      "fields": {
+        "device_id": {
+          "name": "Device",
+          "description": "Ditoo Pro to use. Needed only when more than one is set up."
+        },
+        "weather_entity": {
+          "name": "Weather entity",
+          "description": "Take temperature and condition from this entity."
+        },
+        "temperature": {
+          "name": "Temperature",
+          "description": "Temperature in the device's unit."
+        },
+        "condition": {
+          "name": "Condition",
+          "description": "Weather condition."
+        }
+      }
+    },
+    "sync_time": {
+      "name": "Sync time",
+      "description": "Set the device clock to Home Assistant's time.",
+      "fields": {
+        "device_id": {
+          "name": "Device",
+          "description": "Ditoo Pro to use. Needed only when more than one is set up."
+        }
+      }
+    },
+    "connect": {
+      "name": "Connect",
+      "description": "Connect to the Ditoo and keep reconnecting (turns the Connection switch on).",
+      "fields": {
+        "device_id": {
+          "name": "Device",
+          "description": "Ditoo Pro to use. Needed only when more than one is set up."
+        }
+      }
+    },
+    "disconnect": {
+      "name": "Disconnect",
+      "description": "Disconnect and stay disconnected so the phone app or another host can connect (turns the Connection switch off).",
+      "fields": {
+        "device_id": {
+          "name": "Device",
+          "description": "Ditoo Pro to use. Needed only when more than one is set up."
+        }
+      }
+    },
+    "show_native_text": {
+      "name": "Show native text",
+      "description": "The device scrolls the text by itself with its own font, over the current channel; nothing is streamed, so it scrolls smoothly. Up to 64 characters. Ends after the duration, with Stop native text, or when a channel, drawing or text action takes the screen.",
+      "fields": {
+        "device_id": {
+          "name": "Device",
+          "description": "Ditoo Pro to use. Needed only when more than one is set up."
+        },
+        "text": {
+          "name": "Text",
+          "description": "Up to 64 characters."
+        },
+        "color": {
+          "name": "Color",
+          "description": "Text color."
+        },
+        "background": {
+          "name": "Background",
+          "description": "Background color."
+        },
+        "speed": {
+          "name": "Speed",
+          "description": "1 (slowest) to 17 (fastest), the device's own speed steps."
+        },
+        "duration": {
+          "name": "Duration",
+          "description": "Seconds until the text ends and the channel shows again. Empty: until stopped."
+        }
+      }
+    },
+    "stop_native_text": {
+      "name": "Stop native text",
+      "description": "End the native scrolling text and show the channel again.",
+      "fields": {
+        "device_id": {
+          "name": "Device",
+          "description": "Ditoo Pro to use. Needed only when more than one is set up."
+        }
+      }
+    }
+  },
+  "selector": {
+    "text_start": {
+      "options": {
+        "right": "Enter from the right edge",
+        "left": "Start at the left edge"
+      }
+    },
+    "text_mode": {
+      "options": {
+        "scroll": "Scroll the whole text",
+        "words": "Word by word"
+      }
+    }
+  }
+}

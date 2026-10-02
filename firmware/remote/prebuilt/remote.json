@@ -1,0 +1,20 @@
+{
+  "version": 24025,
+  "base": "24021-unlock",
+  "base_sha1": "251c52e514d47891da1a4494970fbd5f72d5c94a",
+  "blob": "remote.bin",
+  "blob_addr": "0x1ca000",
+  "blob_sha1": "e7dc98472e41f966efefe2951d4b4aa25274f44d",
+  "patches": [
+    "0x84c08:4602004c:4602004b",
+    "0x476dc:44005dd5:44005dd9",
+    "0x2d458:49fff590:490ce9cc",
+    "0x7550c:3a6f98bc:480aa97b",
+    "0x39d70:b6b20300:e0a71c00"
+  ],
+  "symbols": {
+    "command_entry": "0x1ca7e0",
+    "key_filter": "0x1ca7f0",
+    "screen_filter": "0x1ca802"
+  }
+}

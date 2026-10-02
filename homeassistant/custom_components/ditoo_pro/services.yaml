@@ -1,0 +1,137 @@
+show_text:
+  fields:
+    device_id:
+      selector:
+        device:
+          integration: ditoo_pro
+    text:
+      required: true
+      example: "Hello"
+      selector:
+        text:
+    color:
+      default: [255, 255, 255]
+      selector:
+        color_rgb:
+    background:
+      default: [0, 0, 0]
+      selector:
+        color_rgb:
+    speed:
+      default: 12
+      selector:
+        number: { min: 1, max: 30, unit_of_measurement: "px/s" }
+    duration:
+      selector:
+        number: { min: 1, max: 86400, unit_of_measurement: s }
+    y:
+      default: 5
+      selector:
+        number: { min: 0, max: 11 }
+    start:
+      default: right
+      selector:
+        select:
+          options: [right, left]
+          translation_key: text_start
+    mode:
+      default: scroll
+      selector:
+        select:
+          options: [scroll, words]
+          translation_key: text_mode
+    word_seconds:
+      default: 1
+      selector:
+        number: { min: 0.2, max: 60, step: 0.1, unit_of_measurement: s }
+show_native_text:
+  fields:
+    device_id:
+      selector:
+        device:
+          integration: ditoo_pro
+    text:
+      required: true
+      example: "HELLO"
+      selector:
+        text:
+    color:
+      default: [255, 255, 255]
+      selector:
+        color_rgb:
+    background:
+      default: [0, 0, 0]
+      selector:
+        color_rgb:
+    speed:
+      default: 17
+      selector:
+        number: { min: 1, max: 17 }
+    duration:
+      selector:
+        number: { min: 1, max: 86400, unit_of_measurement: s }
+stop_native_text:
+  fields:
+    device_id:
+      selector:
+        device:
+          integration: ditoo_pro
+show_image:
+  fields:
+    device_id:
+      selector:
+        device:
+          integration: ditoo_pro
+    path:
+      required: true
+      example: "/config/www/ditoo/heart.png"
+      selector:
+        text:
+    duration:
+      selector:
+        number: { min: 1, max: 86400, unit_of_measurement: s }
+fill:
+  fields:
+    device_id:
+      selector:
+        device:
+          integration: ditoo_pro
+    color:
+      required: true
+      selector:
+        color_rgb:
+set_weather:
+  fields:
+    device_id:
+      selector:
+        device:
+          integration: ditoo_pro
+    weather_entity:
+      selector:
+        entity:
+          domain: weather
+    temperature:
+      selector:
+        number: { min: -60, max: 60, unit_of_measurement: "°C" }
+    condition:
+      selector:
+        select:
+          options: [clear, cloudy, rain, snow, fog, thunderstorm]
+sync_time:
+  fields:
+    device_id:
+      selector:
+        device:
+          integration: ditoo_pro
+connect:
+  fields:
+    device_id:
+      selector:
+        device:
+          integration: ditoo_pro
+disconnect:
+  fields:
+    device_id:
+      selector:
+        device:
+          integration: ditoo_pro

@@ -1,0 +1,15 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Downloaded stock firmware and built images: never commit Divoom's firmware
+firmware/out/
+*.MVA
+*.mva
+
+# Local compiler output (firmware/tools/build_remote.py)
+firmware/remote/build/
+
+# Logs
+*.log

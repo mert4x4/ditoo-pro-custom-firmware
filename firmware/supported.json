@@ -1,0 +1,46 @@
+{
+  "hardware": 24,
+  "device_name_prefix": "DitooPro-Light",
+  "stock": {
+    "version": 24020,
+    "file": "24020.MVA",
+    "sha1": "ed4dba8470af6599523f204851a0c73162fd58af",
+    "bytes": 1869923,
+    "urls": [
+      "https://f.divoom-gz.com/group1/M00/13/57/L1ghbmND0vWEbYXyAAAAAPANfB4641.MVA",
+      "https://fin.divoom-gz.com/group1/M00/13/57/L1ghbmND0vWEbYXyAAAAAPANfB4641.MVA"
+    ],
+    "update_api": {
+      "url": "https://appin.divoom-gz.com/GetUpdateFileV3",
+      "files": [
+        "https://f.divoom-gz.com/",
+        "https://fin.divoom-gz.com/"
+      ],
+      "requests": [
+        {
+          "Hardware": 24,
+          "IsTest": true,
+          "Language": "EN",
+          "UpdateFlag": 2,
+          "DeviceId": 0,
+          "UserId": 0,
+          "Token": 0
+        },
+        {
+          "Hardware": 24,
+          "IsTest": false,
+          "Language": "EN",
+          "UpdateFlag": 2,
+          "DeviceId": 0,
+          "UserId": 0,
+          "Token": 0
+        }
+      ]
+    }
+  },
+  "remote": {
+    "version": 24025,
+    "file": "24025-remote.MVA",
+    "sha1": "78630429774642caf1c51ac9a1b756fba2041f40"
+  }
+}
